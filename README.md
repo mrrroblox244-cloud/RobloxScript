@@ -5,7 +5,7 @@ Disse skriptene brukes til å bygge en morsom og interaktive Obby (hindringsløy
 ---
 ---
 
-## Innholdsfortegnelse (Innholdsfortegnelse / Table of Contents)
+## Innholdsfortegnelse ( Table of Contents)
 
 1. Kill Block — Dødskloss
 2. Disappearing Block — Forsvinnende kloss
