@@ -35,3 +35,33 @@ part.Touched:Connect(function()
 	end
 end)
 ```
+
+3. **Speed Boost (Fartsokning / แผ่นเพิ่มความเร็ว)**
+
+```lua
+local speedPad = script.Parent
+
+speedPad.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if humanoid and humanoid.WalkSpeed == 16 then
+		humanoid.WalkSpeed = 40
+		task.wait(3)
+		humanoid.WalkSpeed = 16
+	end
+end)
+```
+
+4. **High Jump Pad (Hoppepute / แผ่นเด้งสูง)**
+
+```lua
+   local pad = script.Parent
+
+pad.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local root = character:FindFirstChild("HumanoidRootPart")
+	if root then
+		root.Velocity = Vector3.new(0, 80, 0)
+	end
+end)
+```
