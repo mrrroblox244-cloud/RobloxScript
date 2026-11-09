@@ -1,6 +1,7 @@
 # ROBLOX Script
 
 ---
+---
 
 0. **Checkpoint Script (Sjekkpunkt / Контрольна точка / จุดบันทึกจุดเกิด)**
 
@@ -35,6 +36,7 @@ end)
 3. Legg til skript: Legg til et vanlig Script inni denne klossen og lim inn koden.
 
 ---
+---
 
 1. **Kill Block (Dødskloss / Смертельний блок / แผ่นอันตราย)**
 
@@ -55,6 +57,7 @@ killBlock.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
 ---
 
 2. **Disappearing Block (Forsvinnende kloss / Зникаючий блок / แผ่นหายตัว)**
@@ -83,6 +86,7 @@ end)
 ```
 
 ---
+---
 
 3. **Speed Boost (Fartsøkning / Прискорення / แผ่นเพิ่มความเร็ว)**
 
@@ -106,6 +110,7 @@ end)
 ```
 
 ---
+---
 
 4. **High Jump Pad (Hoppepute / Стрибкова подушка / แผ่นเด้งสูง)**
 
@@ -126,6 +131,7 @@ pad.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
 ---
 
 5. **Rotating Obstacle (Roterende hindring / แท่งหมุนสิ่งกีดขวาง)**
@@ -169,6 +175,7 @@ end)
 ```
 
 ---
+---
 
 7. **Lava Floor (Lava-gulv / Лавова підлога / แผ่นลาวาค่อยๆ ลดเลือด)**
 
@@ -206,6 +213,7 @@ conveyor.AssemblyLinearVelocity = conveyor.CFrame.LookVector * 25
 ```
 
 ---
+---
 
 9. **Trampoline (Super-trampoline / Батут / แผ่นสปริงเด้งดึ๋ง)**
 
@@ -226,6 +234,7 @@ pad.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
 ---
 
 10. **Coin Collector (Mynt-samler / Збір монет / เหรียญเก็บสะสม)**
@@ -259,6 +268,7 @@ end)
 ```
 
 ---
+---
 
 11. **Falling Floor (Fellende gulv / Падаюча підлога / พื้นใต้เท้าหล่น)**
 
@@ -287,6 +297,7 @@ end)
 ```
 
 ---
+---
 
 12. **Checkpoint Flag (Sjekkpunkt-flagg / Прапорець збереження / ธงบันทึกจุดเกิด)**
 
@@ -308,6 +319,7 @@ checkpoint.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
 ---
 
 13. **Low Gravity Zone (Lav tyngdekraft / Зона низької гравітації / โซนแรงโน้มถ่วงต่ำ)**
@@ -331,6 +343,7 @@ end)
 ```
 
 ---
+---
 
 14. **Reset Jump Pad (Nullstill hopp / Скидання стрибка / แผ่นรีเซ็ตการกระโดด)**
 
@@ -351,6 +364,7 @@ pad.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
 ---
 
 15. **Blinking Block (Blinkende kloss / Миготливий блок / แผ่นกะพริบเปิด-ปิด)**
@@ -374,6 +388,7 @@ end
 ```
 
 ---
+---
 
 16. **Color Changing Block (Fargeskiftende kloss / Блок, що змінює колір / แผ่นเปลี่ยนสีสุ่ม)**
 
@@ -393,6 +408,7 @@ part.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
 ---
 
 17. **Push Back Wall (Skyve-vegg / Стіна відштовхування / กำแพงผลักถอยหลัง)**
@@ -415,6 +431,7 @@ end)
 ```
 
 ---
+---
 
 18. **Heal Pad (Helbredende kloss / Блок лікування / แผ่นเพิ่มเลือดเต็ม)**
 
@@ -435,6 +452,7 @@ pad.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
 ---
 
 19. **Speed Slowdown Pad (Saktegående kloss / Блок сповільнення / แผ่นลดความเร็วเดินช้า)**
@@ -459,6 +477,7 @@ end)
 ```
 
 ---
+---
 
 20. **Invisible Kill Block (Usynlig dødskloss / Невидимий смертельний блок / แผ่นอันตรายล่องหน)**
 
@@ -482,6 +501,6 @@ end)
 ```
 
 ---
+---
 
-21. 
 
