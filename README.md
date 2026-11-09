@@ -3,7 +3,96 @@
 ---
 ---
 
-0. **Checkpoint Script (Sjekkpunkt / Контрольна точка / จุดบันทึกจุดเกิด)**
+**Viktig1: Player Leaderstats & Respawn Script**
+
+```lua
+local Players = game:GetService("Players")
+
+-- NO: Funksjon for å sette opp spillerdata når en spiller blir med i spillet
+-- EN: Function to set up player data when a player joins the game
+Players.PlayerAdded:Connect(function(player)
+	
+	-- NO: 1. Opprett leaderstats-mappen for poengtavlen
+	-- EN: 1. Create the leaderstats folder for the leaderboard
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
+
+	-- NO: 2. Opprett Stage-verdi for å spore hvilket nivå spilleren er på (starter på 1)
+	-- EN: 2. Create Stage value to track player level (starts at 1)
+	local stage = Instance.new("IntValue")
+	stage.Name = "Stage"
+	stage.Value = 1
+	stage.Parent = leaderstats
+
+	-- NO: 3. Flytt karakteren til gjeldende sjekkpunkt ved respawn
+	-- EN: 3. Teleport character to current checkpoint upon respawn
+	player.CharacterAdded:Connect(function(character)
+		local currentStage = player.leaderstats.Stage.Value
+		local checkpoint = workspace:FindFirstChild("Stage" .. currentStage)
+
+		if checkpoint then
+			-- NO: Vent til HumanoidRootPart er lastet inn før teleportering
+			-- EN: Wait for HumanoidRootPart to load before teleporting
+			local root = character:WaitForChild("HumanoidRootPart")
+			task.wait(0.1)
+			root.CFrame = checkpoint.CFrame + Vector3.new(0, 3, 0)
+		end
+	end)
+end)
+```
+---
+
+### 🇳🇴 Norsk (Norwegian)
+* **Hva skriptet gjør:** Dette skriptet plasseres i `ServerScriptService` og styrer spillerdata sentralt for hele spillet.
+* **Hovedfunksjoner:**
+  1. **Poengtavle (leaderstats):** Oppretter automatisk en poengtavle øverst til høyre på skjermen som viser spillernes gjeldende nivå (`Stage`).
+  2. **Startverdi:** Alle nye spillere starter automatisk på steg 1 (`Stage = 1`).
+  3. **Gjenoppstå (Respawn):** Hver gang en spiller dør og blir født på nytt, sjekker skriptet hvilket nivå de er på, og teleporterer dem direkte til klossen som heter `Stage1`, `Stage2`, osv.
+* **Slik setter du det opp:**
+  1. Legg skriptet inni **ServerScriptService**.
+  2. Gi sjekkpunkt-klossene i verdenen din navn som **`Stage1`**, **`Stage2`**, **`Stage3`** (pass på at **Anchored** er huket av).
+
+---
+
+### 🇬🇧 English
+* **What the script does:** Placed in `ServerScriptService`, this script centrally manages player data and respawn locations for the entire server.
+* **Key Features:**
+  1. **Leaderboard (leaderstats):** Automatically creates a leaderboard in the top-right corner showing each player's current `Stage`.
+  2. **Starting Stage:** Every player starts at level 1 by default (`Stage = 1`).
+  3. **Automatic Respawn:** Whenever a player dies, the script checks their current stage number and teleports their character directly to the corresponding checkpoint part (`Stage1`, `Stage2`, etc.).
+* **How to set it up:**
+  1. Put the script inside **ServerScriptService**.
+  2. Name your checkpoint parts in the Workspace as **`Stage1`**, **`Stage2`**, **`Stage3`**, etc. (Make sure **Anchored** is set to `true`).
+
+---
+
+### 🇺🇦 Українська (Ukrainian)
+* **Що робить скрипт:** Скрипт розміщується у `ServerScriptService` і централізовано керує даними гравців та точками появи на сервері.
+* **Основні функції:**
+  1. **Таблиця лідерів (leaderstats):** Автоматично створює таблицю лідерів у правому верхньому кутку екрана, яка відображає поточний рівень гравця (`Stage`).
+  2. **Початковий рівень:** Усі нові гравці автоматично починають з 1-го рівня (`Stage = 1`).
+  3. **Відродження (Respawn):** Щоразу, коли гравець гине та з'являється знову, скрипт перевіряє його поточний рівень і телепортує персонажа до відповідного блоку-чекпоінта (`Stage1`, `Stage2` тощо).
+* **Як налаштувати:**
+  1. Помістіть скрипт усередину **ServerScriptService**.
+  2. Назвіть блоки чекпоінтів у Workspace як **`Stage1`**, **`Stage2`**, **`Stage3`** (переконайтеся, що прапорець **Anchored** увімкнено).
+
+---
+
+### 🇹🇭 ไทย (Thai)
+* **หน้าที่ของสคริปต์:** สคริปต์นี้ใส่ไว้ใน `ServerScriptService` เพื่อใช้ควบคุมข้อมูลผู้เล่นและการเกิดใหม่จากส่วนกลางของเซิร์ฟเวอร์
+* **คุณสมบัติหลัก:**
+  1. **ตารางคะแนน (leaderstats):** สร้างกระดานคะแนนมุมขวาบนของหน้าจอโดยอัตโนมัติ เพื่อแสดงระดับด่านปัจจุบัน (`Stage`) ของผู้เล่นแต่ละคน
+  2. **ค่าเริ่มต้น:** ผู้เล่นทุกคนที่เข้าเกมมาใหม่จะเริ่มที่ด่าน 1 เสมอ (`Stage = 1`)
+  3. **การวาร์ปเมื่อเกิดใหม่ (Respawn):** ทุกครั้งที่ผู้เล่นตายแล้วเกิดใหม่ สคริปต์จะเช็กว่าผู้เล่นอยู่อันดับด่านที่เท่าไร แล้วย้ายตัวละครไปเกิดบนแผ่น Checkpoint ที่ตั้งชื่อว่า `Stage1`, `Stage2` ฯลฯ ทันที
+* **วิธีติดตั้ง:**
+  1. นำสคริปต์นี้ไปใส่ไว้ใน **ServerScriptService**
+  2. ตั้งชื่อแผ่น Checkpoint ในฉาก (`Workspace`) ให้เป็น **`Stage1`**, **`Stage2`**, **`Stage3`** ตามลำดับ (และอย่าลืมเปิด **Anchored** = `true`)
+ 
+---
+---
+
+**Viktig2: Checkpoint Script (Sjekkpunkt / Контрольна точка / จุดบันทึกจุดเกิด)**
 
 - 🇬🇧: Updates the player's spawn location to this block upon touch.
 - 🇳🇴: Oppdaterer spillere-s spawn-lokasjon til denne klossen ved berøring.
