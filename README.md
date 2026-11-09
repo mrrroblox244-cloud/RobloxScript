@@ -568,8 +568,7 @@ end)
 ---
 ---
 
-## 20. **Invisible Kill Block 
-(Usynlig dødskloss / Невидимий смертельний блок / แผ่นอันตรายล่องหน)**
+## 20. **Invisible Kill Block (Usynlig dødskloss / Невидимий смертельний блок / แผ่นอันตรายล่องหน)**
 
 - 🇬🇧: A completely invisible trap block that kills the player without warning.
 - 🇳🇴: En helt usynlig fellekloss som dreper spilleren uten forvarsel.
