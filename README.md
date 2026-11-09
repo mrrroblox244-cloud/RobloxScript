@@ -1,11 +1,9 @@
 # ROBLOX Script!
 
----
----
-
-## Introduksjon (Innledning)
-
 Disse skriptene brukes til å bygge en morsom og interaktive Obby (hindringsløype) i Roblox Studio. Hver kloss har en spesiell funksjon som gjør spillet mer spennende for elevene!
+
+---
+---
 
 ## Innholdsfortegnelse (Innholdsfortegnelse / Table of Contents)
 
