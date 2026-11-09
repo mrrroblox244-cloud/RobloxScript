@@ -2,6 +2,33 @@
 
 ---
 
+0. **Checkpoint Script (Sjekkpunkt / Контрольна точка / จุดบันทึกจุดเกิด)**
+
+- 🇬🇧: Updates the player's spawn location to this block upon touch.
+- 🇳🇴: Oppdaterer spillere-s spawn-lokasjon til denne klossen ved berøring.
+- 🇺🇦: Змінює точку появи гравця на цей блок при доторку.
+- 🇹🇭: อัปเดตจุดเกิดของผู้เล่นมาที่แผ่นนี้เมื่อสัมผัส
+
+```lua
+local checkpoint = script.Parent
+
+checkpoint.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local player = game.Players:GetPlayerFromCharacter(character)
+	
+	if player then
+		player.RespawnLocation = checkpoint
+	end
+end)
+```
+***How to set it up in Roblox Studio:***
+
+Insert a Part where you want the checkpoint to be.
+In the Properties window, make sure Anchored is set to true.
+Insert a standard Script inside that Part and paste the code above.
+
+---
+
 1. **Kill Block (Dødskloss / Смертельний блок / แผ่นอันตราย)**
 
 - 🇬🇧: Instantly kills the player upon touch.
@@ -298,5 +325,24 @@ end)
 
 ---
 
-14. **
+14. **Reset Jump Pad (Nullstill hopp / Скидання стрибка / แผ่นรีเซ็ตการกระโดด)**
+
+- 🇬🇧: Resets the player's jump power back to the default value.
+- 🇳🇴: Tilbakestiller spillerens hoppekraft til standardverdi.
+- 🇺🇦: Повертає силу стрибка гравця до стандартного значення.
+- 🇹🇭: คืนค่าพลังการกระโดดของผู้เล่นให้กลับมาเป็นค่าปกติ
+
+```lua
+local pad = script.Parent
+
+pad.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if humanoid then
+		humanoid.JumpPower = 50
+	end
+end)
+```
+
+15. **Blinking Block (Blinkende kloss / Миготливий блок / แผ่นกะพริบเปิด-ปิด)**
 
