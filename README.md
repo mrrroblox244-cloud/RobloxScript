@@ -19,7 +19,12 @@ killBlock.Touched:Connect(function(otherPart)
 end)
 ```
 
-2. **Disappearing Block (Forsvinnende kloss / แผ่นหายตัว)**
+2. **Disappearing Block (Forsvinnende kloss / Зникаючий блок / แผ่นหายตัว)**
+
+- 🇬🇧: Block becomes invisible and non-solid shortly after being touched.
+- 🇳🇴: Klossen blir usynlig og umulig å stå på en kort stund etter berøring.
+- 🇺🇦: Блок стає невидимим і не проходить крізь нього короткий час після доторку.
+- 🇹🇭: แผ่นจะจางหายและทะลุได้ชั่วคราวเมื่อเหยียบ
 
 ```lua
 local part = script.Parent
@@ -39,7 +44,12 @@ part.Touched:Connect(function()
 end)
 ```
 
-3. **Speed Boost (Fartsokning / แผ่นเพิ่มความเร็ว)**
+3. **Speed Boost (Fartsøkning / Прискорення / แผ่นเพิ่มความเร็ว)**
+
+- 🇬🇧: Temporarily increases the player's walking speed.
+- 🇳🇴: Gir spilleren raskere gåfart midlertidig.
+- 🇺🇦: Тимчасово збільшує швидкість ходьби гравця.
+- 🇹🇭: เพิ่มความเร็วในการเดินชั่วคราว
 
 ```lua
 local speedPad = script.Parent
@@ -55,7 +65,12 @@ speedPad.Touched:Connect(function(otherPart)
 end)
 ```
 
-4. **High Jump Pad (Hoppepute / แผ่นเด้งสูง)**
+4. **High Jump Pad (Hoppepute / Стрибкова подушка / แผ่นเด้งสูง)**
+
+- 🇬🇧: Launches the player into the air using a velocity vector.
+- 🇳🇴: Sender spilleren opp i luften med en hastighetsvektor.
+- 🇺🇦: Підкидає гравця в повітря за допомогою вектора швидкості.
+- 🇹🇭: ส่งตัวละครกระโดดลอยขึ้นฟ้าด้วยเวกเตอร์ความเร็ว
 
 ```lua
    local pad = script.Parent
