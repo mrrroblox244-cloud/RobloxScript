@@ -3,6 +3,39 @@
 ---
 ---
 
+## Introduksjon (Innledning)
+
+Disse skriptene brukes til å bygge en morsom og interaktive Obby (hindringsløype) i Roblox Studio. Hver kloss har en spesiell funksjon som gjør spillet mer spennende for elevene!
+
+## Innholdsfortegnelse (Innholdsfortegnelse / Table of Contents)
+
+1. Kill Block — Dødskloss
+2. Disappearing Block — Forsvinnende kloss
+3. Speed Boost — Fartsøkning
+4. High Jump Pad — Hoppepute
+5. Rotating Obstacle — Roterende hindring
+
+6. Teleporter — Teleportering
+7. Lava Floor — Lava-gulv
+8. Conveyor Belt — Samlebånd
+9. Trampoline — Super-trampoline
+10. Coin Collector — Mynt-samler
+
+11. Falling Floor — Fellende gulv
+12. Checkpoint Flag — Sjekkpunkt-flagg
+13. Low Gravity Zone — Lav tyngdekraft
+14. Reset Jump Pad — Nullstill hopp
+15. Blinking Block — Blinkende kloss
+
+16. Color Changing Block — Fargeskiftende kloss
+17. Push Back Wall — Skyve-vegg
+18. Heal Pad — Helbredende kloss
+19. Speed Slowdown Pad — Saktegående kloss
+20. Invisible Kill Block — Usynlig dødskloss
+
+---
+---
+
 ## Viktige 1: Player Leaderstats & Respawn Script
 
 ```lua
