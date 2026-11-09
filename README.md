@@ -3,7 +3,7 @@
 ---
 ---
 
-**Viktig1: Player Leaderstats & Respawn Script**
+## Viktig1: Player Leaderstats & Respawn Script
 
 ```lua
 local Players = game:GetService("Players")
@@ -92,7 +92,7 @@ end)
 ---
 ---
 
-**Viktig2: Checkpoint Script (Sjekkpunkt / Контрольна точка / จุดบันทึกจุดเกิด)**
+## Viktig2: Checkpoint Script (Sjekkpunkt / Контрольна точка / จุดบันทึกจุดเกิด)
 
 - 🇬🇧: Updates the player's spawn location to this block upon touch.
 - 🇳🇴: Oppdaterer spillere-s spawn-lokasjon til denne klossen ved berøring.
