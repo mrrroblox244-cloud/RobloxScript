@@ -17,6 +17,7 @@ end)
 
 
 2. **Disappearing Block (Forsvinnende kloss / แผ่นหายตัว)**
+
 '''lua
 local part = script.Parent
 local isTouched = false
