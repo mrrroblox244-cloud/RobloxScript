@@ -43,18 +43,6 @@ end)
 ```
 ---
 
-### 🇳🇴 Norsk (Norwegian)
-* **Hva skriptet gjør:** Dette skriptet plasseres i `ServerScriptService` og styrer spillerdata sentralt for hele spillet.
-* **Hovedfunksjoner:**
-  1. **Poengtavle (leaderstats):** Oppretter automatisk en poengtavle øverst til høyre på skjermen som viser spillernes gjeldende nivå (`Stage`).
-  2. **Startverdi:** Alle nye spillere starter automatisk på steg 1 (`Stage = 1`).
-  3. **Gjenoppstå (Respawn):** Hver gang en spiller dør og blir født på nytt, sjekker skriptet hvilket nivå de er på, og teleporterer dem direkte til klossen som heter `Stage1`, `Stage2`, osv.
-* **Slik setter du det opp:**
-  1. Legg skriptet inni **ServerScriptService**.
-  2. Gi sjekkpunkt-klossene i verdenen din navn som **`Stage1`**, **`Stage2`**, **`Stage3`** (pass på at **Anchored** er huket av).
-
----
-
 ### 🇬🇧 English
 * **What the script does:** Placed in `ServerScriptService`, this script centrally manages player data and respawn locations for the entire server.
 * **Key Features:**
@@ -64,6 +52,18 @@ end)
 * **How to set it up:**
   1. Put the script inside **ServerScriptService**.
   2. Name your checkpoint parts in the Workspace as **`Stage1`**, **`Stage2`**, **`Stage3`**, etc. (Make sure **Anchored** is set to `true`).
+
+---
+
+### 🇳🇴 Norsk (Norwegian)
+* **Hva skriptet gjør:** Dette skriptet plasseres i `ServerScriptService` og styrer spillerdata sentralt for hele spillet.
+* **Hovedfunksjoner:**
+  1. **Poengtavle (leaderstats):** Oppretter automatisk en poengtavle øverst til høyre på skjermen som viser spillernes gjeldende nivå (`Stage`).
+  2. **Startverdi:** Alle nye spillere starter automatisk på steg 1 (`Stage = 1`).
+  3. **Gjenoppstå (Respawn):** Hver gang en spiller dør og blir født på nytt, sjekker skriptet hvilket nivå de er på, og teleporterer dem direkte til klossen som heter `Stage1`, `Stage2`, osv.
+* **Slik setter du det opp:**
+  1. Legg skriptet inni **ServerScriptService**.
+  2. Gi sjekkpunkt-klossene i verdenen din navn som **`Stage1`**, **`Stage2`**, **`Stage3`** (pass på at **Anchored** er huket av).
 
 ---
 
