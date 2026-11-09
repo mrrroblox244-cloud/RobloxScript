@@ -3,7 +3,7 @@
 1. **Kill Block (Dødskloss / แผ่นอันตราย)**
 
 
-'''lua
+```lua
 local killBlock = script.Parent
 
 killBlock.Touched:Connect(function(otherPart)
@@ -13,12 +13,12 @@ killBlock.Touched:Connect(function(otherPart)
 		humanoid.Health = 0
 	end
 end)
-'''
+```
 
 
 2. **Disappearing Block (Forsvinnende kloss / แผ่นหายตัว)**
 
-'''lua
+```lua
 local part = script.Parent
 local isTouched = false
 
@@ -34,4 +34,4 @@ part.Touched:Connect(function()
 		isTouched = false
 	end
 end)
-'''
+```
