@@ -2,7 +2,6 @@
 
 1. **Kill Block (Dødskloss / แผ่นอันตราย)**
 
-
 ```lua
 local killBlock = script.Parent
 
@@ -14,7 +13,6 @@ killBlock.Touched:Connect(function(otherPart)
 	end
 end)
 ```
-
 
 2. **Disappearing Block (Forsvinnende kloss / แผ่นหายตัว)**
 
@@ -65,3 +63,32 @@ pad.Touched:Connect(function(otherPart)
 	end
 end)
 ```
+
+5. **Rotating Obstacle (Roterende hindring / แท่งหมุนสิ่งกีดขวาง)**
+
+```lua
+local part = script.Parent
+
+while true do
+	part.CFrame = part.CFrame * CFrame.Angles(0, math.rad(5), 0)
+	task.wait(0.03)
+end
+```
+
+6. **Teleporter (Teleportering / วาร์ปไปจุดต่อไป)**
+
+```lua
+local portal = script.Parent
+
+portal.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local root = character:FindFirstChild("HumanoidRootPart")
+	local target = workspace:FindFirstChild("TeleportTarget")
+	
+	if root and target then
+		root.CFrame = target.CFrame + Vector3.new(0, 3, 0)
+	end
+end)
+```
+
+7. **
