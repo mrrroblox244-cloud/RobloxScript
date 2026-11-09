@@ -127,7 +127,7 @@ end)
 ---
 ---
 
-1. **Kill Block (Dødskloss / Смертельний блок / แผ่นอันตราย)**
+## 1. **Kill Block (Dødskloss / Смертельний блок / แผ่นอันตราย)**
 
 - 🇬🇧: Instantly kills the player upon touch.
 - 🇳🇴: Dreper spilleren umiddelbart ved berøring.
