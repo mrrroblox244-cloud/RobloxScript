@@ -1,5 +1,7 @@
 # ROBLOX Script
 
+---
+
 1. **Kill Block (Dødskloss / Смертельний блок / แผ่นอันตราย)**
 
 - 🇬🇧: Instantly kills the player upon touch.
@@ -18,6 +20,8 @@ killBlock.Touched:Connect(function(otherPart)
 	end
 end)
 ```
+
+---
 
 2. **Disappearing Block (Forsvinnende kloss / Зникаючий блок / แผ่นหายตัว)**
 
@@ -44,6 +48,8 @@ part.Touched:Connect(function()
 end)
 ```
 
+---
+
 3. **Speed Boost (Fartsøkning / Прискорення / แผ่นเพิ่มความเร็ว)**
 
 - 🇬🇧: Temporarily increases the player's walking speed.
@@ -65,6 +71,8 @@ speedPad.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
+
 4. **High Jump Pad (Hoppepute / Стрибкова подушка / แผ่นเด้งสูง)**
 
 - 🇬🇧: Launches the player into the air using a velocity vector.
@@ -84,6 +92,8 @@ pad.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
+
 5. **Rotating Obstacle (Roterende hindring / แท่งหมุนสิ่งกีดขวาง)**
 
 - 🇬🇧: Continuously rotates the part around its axis.
@@ -100,6 +110,8 @@ while true do
 	task.wait(0.03)
 end
 ```
+
+---
 
 6. **Teleporter (Teleportering / วาร์ปไปจุดต่อไป)**
 
@@ -122,6 +134,8 @@ portal.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
+
 7. **Lava Floor (Lava-gulv / Лавова підлога / แผ่นลาวาค่อยๆ ลดเลือด)**
 
 - 🇬🇧: Gradually damages the player while standing on the block.
@@ -142,6 +156,8 @@ lavaPart.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
+
 8. **Conveyor Belt (Samlebånd / Конвеєрна стрічка / สายพานเลื่อนตัวละคร)**
 
 - 🇬🇧: Automatically pushes the player in a specific direction.
@@ -154,7 +170,9 @@ local conveyor = script.Parent
 
 conveyor.AssemblyLinearVelocity = conveyor.CFrame.LookVector * 25
 ```
+
 ---
+
 9. **Trampoline (Super-trampoline / Батут / แผ่นสปริงเด้งดึ๋ง)**
 
 - 🇬🇧: Launches the player upward using an impulse force.
@@ -173,7 +191,9 @@ pad.Touched:Connect(function(otherPart)
 	end
 end)
 ```
+
 ---
+
 10. **Coin Collector (Mynt-samler / Збір монет / เหรียญเก็บสะสม)**
 
 - 🇬🇧: Awards points to the player and temporarily vanishes before respawning.
