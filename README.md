@@ -1,1 +1,36 @@
-# RobloxScript
+# ROBLOX Script
+
+1. **Kill Block (Dødskloss / แผ่นอันตราย)**
+
+
+'''lua
+local killBlock = script.Parent
+
+killBlock.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if humanoid then
+		humanoid.Health = 0
+	end
+end)
+'''
+
+
+2. **Disappearing Block (Forsvinnende kloss / แผ่นหายตัว)**
+'''lua
+local part = script.Parent
+local isTouched = false
+
+part.Touched:Connect(function()
+	if not isTouched then
+		isTouched = true
+		task.wait(0.3)
+		part.Transparency = 0.8
+		part.CanCollide = false
+		task.wait(2)
+		part.Transparency = 0
+		part.CanCollide = true
+		isTouched = false
+	end
+end)
+'''
