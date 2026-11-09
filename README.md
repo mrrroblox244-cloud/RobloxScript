@@ -149,7 +149,7 @@ end)
 ---
 ---
 
-2. **Disappearing Block (Forsvinnende kloss / Зникаючий блок / แผ่นหายตัว)**
+## 2. **Disappearing Block (Forsvinnende kloss / Зникаючий блок / แผ่นหายตัว)**
 
 - 🇬🇧: Block becomes invisible and non-solid shortly after being touched.
 - 🇳🇴: Klossen blir usynlig og umulig å stå på en kort stund etter berøring.
@@ -177,7 +177,7 @@ end)
 ---
 ---
 
-3. **Speed Boost (Fartsøkning / Прискорення / แผ่นเพิ่มความเร็ว)**
+## 3. **Speed Boost (Fartsøkning / Прискорення / แผ่นเพิ่มความเร็ว)**
 
 - 🇬🇧: Temporarily increases the player's walking speed.
 - 🇳🇴: Gir spilleren raskere gåfart midlertidig.
@@ -201,7 +201,7 @@ end)
 ---
 ---
 
-4. **High Jump Pad (Hoppepute / Стрибкова подушка / แผ่นเด้งสูง)**
+## 4. **High Jump Pad (Hoppepute / Стрибкова подушка / แผ่นเด้งสูง)**
 
 - 🇬🇧: Launches the player into the air using a velocity vector.
 - 🇳🇴: Sender spilleren opp i luften med en hastighetsvektor.
@@ -223,7 +223,7 @@ end)
 ---
 ---
 
-5. **Rotating Obstacle (Roterende hindring / แท่งหมุนสิ่งกีดขวาง)**
+## 5. **Rotating Obstacle (Roterende hindring / แท่งหมุนสิ่งกีดขวาง)**
 
 - 🇬🇧: Continuously rotates the part around its axis.
 - 🇳🇴: Roterer klossen kontinuerlig rundt sin akse.
@@ -242,7 +242,7 @@ end
 
 ---
 
-6. **Teleporter (Teleportering / วาร์ปไปจุดต่อไป)**
+## 6. **Teleporter (Teleportering / วาร์ปไปจุดต่อไป)**
 
 - 🇬🇧: Instantly moves the player to a target location in the game world.
 - 🇳🇴: Flytter spilleren umiddelbart til et annet mål i spillverdenen.
@@ -266,7 +266,7 @@ end)
 ---
 ---
 
-7. **Lava Floor (Lava-gulv / Лавова підлога / แผ่นลาวาค่อยๆ ลดเลือด)**
+## 7. **Lava Floor (Lava-gulv / Лавова підлога / แผ่นลาวาค่อยๆ ลดเลือด)**
 
 - 🇬🇧: Gradually damages the player while standing on the block.
 - 🇳🇴: Skader spilleren gradvis så lenge de står på klossen.
@@ -288,7 +288,7 @@ end)
 
 ---
 
-8. **Conveyor Belt (Samlebånd / Конвеєрна стрічка / สายพานเลื่อนตัวละคร)**
+## 8. **Conveyor Belt (Samlebånd / Конвеєрна стрічка / สายพานเลื่อนตัวละคร)**
 
 - 🇬🇧: Automatically pushes the player in a specific direction.
 - 🇳🇴: Skyver spilleren i en bestemt retning automatisk.
@@ -304,7 +304,7 @@ conveyor.AssemblyLinearVelocity = conveyor.CFrame.LookVector * 25
 ---
 ---
 
-9. **Trampoline (Super-trampoline / Батут / แผ่นสปริงเด้งดึ๋ง)**
+## 9. **Trampoline (Super-trampoline / Батут / แผ่นสปริงเด้งดึ๋ง)**
 
 - 🇬🇧: Launches the player upward using an impulse force.
 - 🇳🇴: Skyter spilleren oppover ved hjelp av impuls-kraft.
@@ -326,7 +326,7 @@ end)
 ---
 ---
 
-10. **Coin Collector (Mynt-samler / Збір монет / เหรียญเก็บสะสม)**
+## 10. **Coin Collector (Mynt-samler / Збір монет / เหรียญเก็บสะสม)**
 
 - 🇬🇧: Awards points to the player and temporarily vanishes before respawning.
 - 🇳🇴: Gir poeng til spilleren og forsvinner midlertidig før den dukker opp igjen.
@@ -359,7 +359,7 @@ end)
 ---
 ---
 
-11. **Falling Floor (Fellende gulv / Падаюча підлога / พื้นใต้เท้าหล่น)**
+## 11. **Falling Floor (Fellende gulv / Падаюча підлога / พื้นใต้เท้าหล่น)**
 
 - 🇬🇧: The floor unanchors and falls down when stepped on.
 - 🇳🇴: Gulvet mister forankringen og faller ned når spilleren tråkker på det.
@@ -388,7 +388,7 @@ end)
 ---
 ---
 
-12. **Checkpoint Flag (Sjekkpunkt-flagg / Прапорець збереження / ธงบันทึกจุดเกิด)**
+## 12. **Checkpoint Flag (Sjekkpunkt-flagg / Прапорець збереження / ธงบันทึกจุดเกิด)**
 
 - 🇬🇧: Updates the player's spawn location to this block upon touch
 - 🇳🇴: Endrer spillerens spawn-lokasjon til denne klossen ved berøring.
@@ -411,7 +411,7 @@ end)
 ---
 ---
 
-13. **Low Gravity Zone (Lav tyngdekraft / Зона низької гравітації / โซนแรงโน้มถ่วงต่ำ)**
+## 13. **Low Gravity Zone (Lav tyngdekraft / Зона низької гравітації / โซนแรงโน้มถ่วงต่ำ)**
 
 - 🇬🇧: Temporarily allows the player to jump much higher.
 - 🇳🇴: Gir spilleren mulighet til å hoppe mye høyere midlertidig.
@@ -434,7 +434,7 @@ end)
 ---
 ---
 
-14. **Reset Jump Pad (Nullstill hopp / Скидання стрибка / แผ่นรีเซ็ตการกระโดด)**
+## 14. **Reset Jump Pad (Nullstill hopp / Скидання стрибка / แผ่นรีเซ็ตการกระโดด)**
 
 - 🇬🇧: Resets the player's jump power back to the default value.
 - 🇳🇴: Tilbakestiller spillerens hoppekraft til standardverdi.
@@ -456,7 +456,7 @@ end)
 ---
 ---
 
-15. **Blinking Block (Blinkende kloss / Миготливий блок / แผ่นกะพริบเปิด-ปิด)**
+## 15. **Blinking Block (Blinkende kloss / Миготливий блок / แผ่นกะพริบเปิด-ปิด)**
 
 - 🇬🇧: Automatically toggles visibility and collision at regular time intervals.
 - 🇳🇴: Veksler automatisk mellom å være synlig og usynlig med faste mellomrom.
@@ -479,7 +479,7 @@ end
 ---
 ---
 
-16. **Color Changing Block (Fargeskiftende kloss / Блок, що змінює колір / แผ่นเปลี่ยนสีสุ่ม)**
+## 16. **Color Changing Block (Fargeskiftende kloss / Блок, що змінює колір / แผ่นเปลี่ยนสีสุ่ม)**
 
 - 🇬🇧: Randomly changes the block's color every time it is touched.
 - 🇳🇴: Endrer klossens farge tilfeldig hver gang den berøres.
@@ -500,7 +500,7 @@ end)
 ---
 ---
 
-17. **Push Back Wall (Skyve-vegg / Стіна відштовхування / กำแพงผลักถอยหลัง)**
+## 17. **Push Back Wall (Skyve-vegg / Стіна відштовхування / กำแพงผลักถอยหลัง)**
 
 - 🇬🇧: Knocks the player backward in the opposite direction they are facing.
 - 🇳🇴: Dytter spilleren bakover i motsatt retning av der den ser.
@@ -522,7 +522,7 @@ end)
 ---
 ---
 
-18. **Heal Pad (Helbredende kloss / Блок лікування / แผ่นเพิ่มเลือดเต็ม)**
+## 18. **Heal Pad (Helbredende kloss / Блок лікування / แผ่นเพิ่มเลือดเต็ม)**
 
 - 🇬🇧: Restores the player's health to maximum upon touch.
 - 🇳🇴: Fyller opp spillerens helse til maksimum når den berøres.
@@ -544,7 +544,7 @@ end)
 ---
 ---
 
-19. **Speed Slowdown Pad (Saktegående kloss / Блок сповільнення / แผ่นลดความเร็วเดินช้า)**
+## 19. **Speed Slowdown Pad (Saktegående kloss / Блок сповільнення / แผ่นลดความเร็วเดินช้า)**
 
 - 🇬🇧: Temporarily slows down the player's movement speed as a hazard.
 - 🇳🇴: Sakker ned spillerens hastighet midlertidig som en straff-sone.
@@ -568,7 +568,7 @@ end)
 ---
 ---
 
-20. **Invisible Kill Block (Usynlig dødskloss / Невидимий смертельний блок / แผ่นอันตรายล่องหน)**
+## 20. **Invisible Kill Block (Usynlig dødskloss / Невидимий смертельний блок / แผ่นอันตรายล่องหน)**
 
 - 🇬🇧: A completely invisible trap block that kills the player without warning.
 - 🇳🇴: En helt usynlig fellekloss som dreper spilleren uten forvarsel.
