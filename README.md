@@ -351,5 +351,137 @@ pad.Touched:Connect(function(otherPart)
 end)
 ```
 
+---
+
 15. **Blinking Block (Blinkende kloss / Миготливий блок / แผ่นกะพริบเปิด-ปิด)**
+
+- 🇬🇧: Automatically toggles visibility and collision at regular time intervals.
+- 🇳🇴: Veksler automatisk mellom å være synlig og usynlig med faste mellomrom.
+- 🇺🇦: Автоматично перемикається між видимим і невидимим через рівні проміжки часу.
+- 🇹🇭: สลับสถานะการแสดงผลและการชนตามเวลาที่กำหนดโดยอัตโนมัติ
+
+```lua
+local part = script.Parent
+
+while true do
+	part.Transparency = 0
+	part.CanCollide = true
+	task.wait(2)
+	part.Transparency = 1
+	part.CanCollide = false
+	task.wait(2)
+end
+```
+
+---
+
+16. **Color Changing Block (Fargeskiftende kloss / Блок, що змінює колір / แผ่นเปลี่ยนสีสุ่ม)**
+
+- 🇬🇧: Randomly changes the block's color every time it is touched.
+- 🇳🇴: Endrer klossens farge tilfeldig hver gang den berøres.
+- 🇺🇦: Змінює колір блоку випадковим чином щоразу при доторку.
+- 🇹🇭: สุ่มเปลี่ยนสีของแผ่นทุกครั้งที่มีคนสัมผัส
+
+```lua
+local part = script.Parent
+
+part.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	if character:FindFirstChildOfClass("Humanoid") then
+		part.Color = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
+	end
+end)
+```
+
+---
+
+17. **Push Back Wall (Skyve-vegg / Стіна відштовхування / กำแพงผลักถอยหลัง)**
+
+- 🇬🇧: Knocks the player backward in the opposite direction they are facing.
+- 🇳🇴: Dytter spilleren bakover i motsatt retning av der den ser.
+- 🇺🇦: Відштовхує гравця назад у протилежному напрямку від його погляду.
+- 🇹🇭: ผลักตัวละครให้กระเด็นถอยหลังสวนทางกับทิศทางที่หันหน้าไป
+
+```lua
+local wall = script.Parent
+
+wall.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local root = character:FindFirstChild("HumanoidRootPart")
+	if root then
+		root:ApplyImpulse(root.CFrame.LookVector * -1500)
+	end
+end)
+```
+
+---
+
+18. **Heal Pad (Helbredende kloss / Блок лікування / แผ่นเพิ่มเลือดเต็ม)**
+
+- 🇬🇧: Restores the player's health to maximum upon touch.
+- 🇳🇴: Fyller opp spillerens helse til maksimum når den berøres.
+- 🇺🇦: Відновлює здоров'я гравця до максимуму при доторку.
+- 🇹🇭: ฟื้นฟูพลังชีวิตของผู้เล่นให้เต็มทันทีเมื่อสัมผัส
+
+```lua
+local pad = script.Parent
+
+pad.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if humanoid then
+		humanoid.Health = humanoid.MaxHealth
+	end
+end)
+```
+
+---
+
+19. **Speed Slowdown Pad (Saktegående kloss / Блок сповільнення / แผ่นลดความเร็วเดินช้า)**
+
+- 🇬🇧: Temporarily slows down the player's movement speed as a hazard.
+- 🇳🇴: Sakker ned spillerens hastighet midlertidig som en straff-sone.
+- 🇺🇦: Тимчасово сповільнює швидкість гравця як штрафна зона.
+- 🇹🇭: ลดความเร็วในการเดินของผู้เล่นลงชั่วคราวเหมือนโดนกับดักหน่วง
+
+```lua
+local slowPad = script.Parent
+
+slowPad.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if humanoid and humanoid.WalkSpeed == 16 then
+		humanoid.WalkSpeed = 6
+		task.wait(3)
+		humanoid.WalkSpeed = 16
+	end
+end)
+```
+
+---
+
+20. **Invisible Kill Block (Usynlig dødskloss / Невидимий смертельний блок / แผ่นอันตรายล่องหน)**
+
+- 🇬🇧: A completely invisible trap block that kills the player without warning.
+- 🇳🇴: En helt usynlig fellekloss som dreper spilleren uten forvarsel.
+- 🇺🇦: Повністю невидимий блок-пастка, який вбиває гравця без попередження.
+- 🇹🇭: แผ่นอันตรายที่มองไม่เห็นตัวตน (โปร่งใส 100%) ใช้ดักผู้เล่นไม่ให้รู้ตัว
+
+```lua
+local secretKill = script.Parent
+secretKill.Transparency = 1
+secretKill.CanCollide = true
+
+secretKill.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if humanoid then
+		humanoid.Health = 0
+	end
+end)
+```
+
+---
+
+21. 
 
