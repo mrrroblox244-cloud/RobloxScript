@@ -202,5 +202,101 @@ end)
 - 🇹🇭: เพิ่มคะแนนให้ผู้เล่นและเหรียญจะหายไปชั่วคราวก่อนเกิดใหม่
 
 ```lua
+local coin = script.Parent
+local isCollected = false
 
+coin.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local player = game.Players:GetPlayerFromCharacter(character)
+	
+	if player and not isCollected then
+		isCollected = true
+		if player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Coins") then
+			player.leaderstats.Coins.Value += 1
+		end
+		coin.Transparency = 1
+		coin.CanCollide = false
+		task.wait(5)
+		coin.Transparency = 0
+		coin.CanCollide = true
+		isCollected = false
+	end
+end)
 ```
+
+---
+
+11. **Falling Floor (Fellende gulv / Падаюча підлога / พื้นใต้เท้าหล่น)**
+
+- 🇬🇧: The floor unanchors and falls down when stepped on.
+- 🇳🇴: Gulvet mister forankringen og faller ned når spilleren tråkker på det.
+- 🇺🇦: Підлога втрачає закріплення і падає, коли на неї наступають.
+- 🇹🇭: พื้นจะหลุดร่วงตกลงมาเมื่อผู้เล่นเหยียบ
+
+```lua
+local trapDoor = script.Parent
+local triggered = false
+
+trapDoor.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	if character:FindFirstChildOfClass("Humanoid") and not triggered then
+		triggered = true
+		task.wait(0.5)
+		trapDoor.Anchored = false
+		task.wait(3)
+		trapDoor.AssemblyLinearVelocity = Vector3.zero
+		trapDoor.AssemblyAngularVelocity = Vector3.zero
+		trapDoor.Anchored = true
+		triggered = false
+	end
+end)
+```
+
+---
+
+12. **Checkpoint Flag (Sjekkpunkt-flagg / Прапорець збереження / ธงบันทึกจุดเกิด)**
+
+- 🇬🇧: Updates the player's spawn location to this block upon touch
+- 🇳🇴: Endrer spillerens spawn-lokasjon til denne klossen ved berøring.
+- 🇺🇦: Змінює точку появи гравця на цей блок при доторку..
+- 🇹🇭: อัปเดตจุดเกิดของผู้เล่นมาที่แผ่นนี้เมื่อสัมผัส
+
+```lua
+local checkpoint = script.Parent
+
+checkpoint.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local player = game.Players:GetPlayerFromCharacter(character)
+	
+	if player then
+		player.RespawnLocation = checkpoint
+	end
+end)
+```
+
+---
+
+13. **Low Gravity Zone (Lav tyngdekraft / Зона низької гравітації / โซนแรงโน้มถ่วงต่ำ)**
+
+- 🇬🇧: Temporarily allows the player to jump much higher.
+- 🇳🇴: Gir spilleren mulighet til å hoppe mye høyere midlertidig.
+- 🇺🇦: Дозволяє гравцеві стрибати набагато вище тимчасово.
+- 🇹🇭: ทำให้ผู้เล่นกระโดดได้สูงขึ้นมากชั่วคราว
+
+```lua
+local zone = script.Parent
+
+zone.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if humanoid then
+		humanoid.UseJumpPower = true
+		humanoid.JumpPower = 100
+	end
+end)
+```
+
+---
+
+14. **
+
