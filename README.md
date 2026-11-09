@@ -86,7 +86,13 @@ end)
 
 5. **Rotating Obstacle (Roterende hindring / แท่งหมุนสิ่งกีดขวาง)**
 
+- 🇬🇧: Continuously rotates the part around its axis.
+- 🇳🇴: Roterer klossen kontinuerlig rundt sin akse.
+- 🇺🇦: Безперервно обертає блок навколо своєї осі.
+- 🇹🇭: หมุนชิ้นส่วนไปเรื่อยๆ อย่างต่อเนื่อง
+
 ```lua
+
 local part = script.Parent
 
 while true do
@@ -96,6 +102,11 @@ end
 ```
 
 6. **Teleporter (Teleportering / วาร์ปไปจุดต่อไป)**
+
+- 🇬🇧: Instantly moves the player to a target location in the game world.
+- 🇳🇴: Flytter spilleren umiddelbart til et annet mål i spillverdenen.
+- 🇺🇦: Миттєво переміщує гравця до іншої цілі у світі гри.
+- 🇹🇭: ย้ายตำแหน่งตัวละครไปยังจุดปลายทางทันที
 
 ```lua
 local portal = script.Parent
@@ -111,4 +122,65 @@ portal.Touched:Connect(function(otherPart)
 end)
 ```
 
-7. **
+7. **Lava Floor (Lava-gulv / Лавова підлога / แผ่นลาวาค่อยๆ ลดเลือด)**
+
+- 🇬🇧: Gradually damages the player while standing on the block.
+- 🇳🇴: Skader spilleren gradvis så lenge de står på klossen.
+- 🇺🇦: Поступово завдає шкоди гравцю, поки він стоїть на блоці.
+- 🇹🇭: ค่อยๆ ลดเลือดเรื่อยๆ ตราบใดที่ยังยืนบนแผ่นนี้
+
+```lua
+local lavaPart = script.Parent
+
+lavaPart.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if humanoid and humanoid.Health > 0 then
+		humanoid:TakeDamage(10)
+		task.wait(0.5)
+	end
+end)
+```
+
+8. **Conveyor Belt (Samlebånd / Конвеєрна стрічка / สายพานเลื่อนตัวละคร)**
+
+- 🇬🇧: Automatically pushes the player in a specific direction.
+- 🇳🇴: Skyver spilleren i en bestemt retning automatisk.
+- 🇺🇦: Автоматично штовхає гравця в певному напрямку.
+- 🇹🇭: ดันตัวละครให้เคลื่อนที่ไปตามทิศทางอัตโนมัติ
+
+```lua
+local conveyor = script.Parent
+
+conveyor.AssemblyLinearVelocity = conveyor.CFrame.LookVector * 25
+```
+---
+9. **Trampoline (Super-trampoline / Батут / แผ่นสปริงเด้งดึ๋ง)**
+
+- 🇬🇧: Launches the player upward using an impulse force.
+- 🇳🇴: Skyter spilleren oppover ved hjelp av impuls-kraft.
+- 🇺🇦: Підкидає гравця вгору за допомогою імпульсної сили.
+- 🇹🇭: ดีดตัวผู้เล่นขึ้นด้านบนด้วยแรงกระแทก
+
+```lua
+local pad = script.Parent
+
+pad.Touched:Connect(function(otherPart)
+	local character = otherPart.Parent
+	local root = character:FindFirstChild("HumanoidRootPart")
+	if root then
+		root:ApplyImpulse(Vector3.new(0, 2500, 0))
+	end
+end)
+```
+---
+10. **Coin Collector (Mynt-samler / Збір монет / เหรียญเก็บสะสม)**
+
+- 🇬🇧: Awards points to the player and temporarily vanishes before respawning.
+- 🇳🇴: Gir poeng til spilleren og forsvinner midlertidig før den dukker opp igjen.
+- 🇺🇦: Нараховує очки гравцю та тимчасово зникає перед відновленням.
+- 🇹🇭: เพิ่มคะแนนให้ผู้เล่นและเหรียญจะหายไปชั่วคราวก่อนเกิดใหม่
+
+```lua
+
+```
