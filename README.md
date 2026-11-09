@@ -21,11 +21,18 @@ checkpoint.Touched:Connect(function(otherPart)
 	end
 end)
 ```
+
 ***How to set it up in Roblox Studio:***
 
-Insert a Part where you want the checkpoint to be.
-In the Properties window, make sure Anchored is set to true.
-Insert a standard Script inside that Part and paste the code above.
+1. Insert a Part where you want the checkpoint to be.
+2. In the Properties window, make sure Anchored is set to true.
+3. Insert a standard Script inside that Part and paste the code above.
+
+***Slik setter du det opp i Roblox Studio:***
+
+1. Sett inn en Part: Legg til en Part (kloss) der du vil at sjekkpunktet skal være.
+2. Fest klossen (Anchored): I vinduet for Properties (Egenskaper), pass på at Anchored er huket av (true) slik at klossen ikke faller ned.
+3. Legg til skript: Legg til et vanlig Script inni denne klossen og lim inn koden.
 
 ---
 
